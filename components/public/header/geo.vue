@@ -4,7 +4,7 @@
     <nuxt-link
       class="changeCity"
       to="/changeCity">切换城市</nuxt-link>
-    [天河 珠江新城 K11]
+    [天河 越秀 荔湾]
   </div>
 </template>
 
