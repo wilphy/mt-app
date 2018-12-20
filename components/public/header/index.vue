@@ -1,15 +1,16 @@
 <template>
   <el-row
-    :gutter="15"
+    :gutter="0"
     class="m-header">
-    <el-col :span="6">
+    <el-col :span="4">
       <geo/>
     </el-col>
     <el-col :span="6">
       <user/>
     </el-col>
-    <!-- <el-col :span="6">
-    </el-col> -->
+    <el-col :span="14">
+      <user/>
+    </el-col>
   </el-row>
 </template>
 
