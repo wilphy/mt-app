@@ -1,6 +1,28 @@
 <template>
-  <div class="topbar">
-    1
+  <div class="search-panel">
+    <el-row>
+      <el-col
+        :span="3"
+        class="left">
+        <img
+          src="https://s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png"
+          alt="美团">
+      </el-col>
+      <el-col
+        :span="15"
+        class="center">
+        2
+      </el-col>
+      <el-col
+        :span="6"
+        class="right">
+        <ul class="security">
+          <li><i class="refund"/><p class="txt">随时退</p></li>
+          <li><i class="single"/><p class="txt">不满意免单</p></li>
+          <li><i class="overdue"/><p class="txt">过期退</p></li>
+        </ul>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -10,5 +32,5 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 </style>
