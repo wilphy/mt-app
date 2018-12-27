@@ -1,6 +1,6 @@
 <template>
   <div class="search-panel">
-    <el-row>
+    <el-row class="m-header-searchbar">
       <el-col
         :span="3"
         class="left">
