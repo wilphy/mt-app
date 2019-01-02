@@ -22,18 +22,16 @@
             v-if="isHotPlace"
             class="hotPlace">
             <dt>热门搜索</dt>
-            <dd>海底捞</dd>
-            <dd>麻辣烫</dd>
-            <dd>虾饺</dd>
+            <dd
+              v-for="(item, idx) in hotPlace"
+              :key="idx">{{ item }}</dd>
           </dl>
           <dl
             v-if="isSearchList"
             class="searchList">
-            <dd>火锅</dd>
-            <dd>火锅</dd>
-            <dd>火锅</dd>
-            <dd>火锅</dd>
-            <dd>火锅</dd>
+            <dd
+              v-for="(item, idx) in searchList"
+              :key="idx">{{ item }}</dd>
           </dl>
         </div>
         <br>
@@ -89,7 +87,9 @@ export default {
   data() {
     return {
       search: '',
-      isFocus: false
+      isFocus: false,
+      searchList: ['海底捞', '麦当劳', '肯德基'],
+      hotPlace: ['广州塔', '动物园', '长隆']
     }
   },
   computed: {
