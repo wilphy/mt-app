@@ -21,11 +21,10 @@
           <dl
             v-if="isHotPlace"
             class="hotPlace">
-            <dt>虾饺</dt>
-            <dt>烧麦</dt>
-            <dt>肠粉</dt>
-            <dt>叉烧包</dt>
-            <dt>凤爪</dt>
+            <dt>热门搜索</dt>
+            <dd>海底捞</dd>
+            <dd>麻辣烫</dd>
+            <dd>虾饺</dd>
           </dl>
           <dl
             v-if="isSearchList"
@@ -37,11 +36,12 @@
             <dd>火锅</dd>
           </dl>
         </div>
+        <br>
         <p class="suggset">
           <a href="#">广州塔</a>
-          <a href="#">广州塔</a>
-          <a href="#">广州塔</a>
-          <a href="#">广州塔</a>
+          <a href="#">珠江新城</a>
+          <a href="#">上下九</a>
+          <a href="#">东山口</a>
         </p>
         <ul class="nav">
           <li>
@@ -105,7 +105,10 @@ export default {
       this.isFocus = true
     },
     blur: function() {
-      this.isFocus = false
+      let self = this;
+      setTimeout(() => {
+        self.isFocus = false
+      }, 200)
     }
   }
 }
