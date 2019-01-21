@@ -2,7 +2,7 @@
   <div class="page-index">
     <el-row>
       <el-col :span="5">
-        <Emenu/>
+        <emenu/>
       </el-col>
       <el-col :span="19">222</el-col>
     </el-row>
