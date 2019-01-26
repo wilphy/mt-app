@@ -8,10 +8,14 @@
         v-for="(item, index) in menu"
         :key="index"
         @mouseenter="enter">
-        <i :class="item.type"/>{{ item.title }}<span class="arrow"/>
+        <i :class="item.type"/>{{ item.name }}<span class="arrow"/>
       </dd>
     </dl>
-    <div class="detail">
+    <div
+      v-if="kind"
+      class="detail"
+      @mouseenter="sover"
+      @mouseleave="sout">
       <template
         v-for="(item,idx) in curdetail.child">
         <h4 :key="idx">{{ item.title }}</h4>
@@ -25,7 +29,7 @@
 
 <script>
 export default {
-  ddata(){
+  data(){
     return {
       kind:'',
       menu:[{
@@ -52,12 +56,12 @@ export default {
       }]
     }
   },
-  computed: {
-    curdetail: () => {
+  computed:{
+    curdetail:function(){
       return this.menu.filter(item => item.type===this.kind)[0]
     }
   },
-  methods: {
+  methods:{
     mouseleave:function(){
       let self=this;
       self._timer=setTimeout(function(){
@@ -66,6 +70,12 @@ export default {
     },
     enter:function(e){
       this.kind=e.target.querySelector('i').className
+    },
+    sover:function(){
+      clearTimeout(this._timer)
+    },
+    sout:function(){
+      this.kind=''
     }
   }
 }
